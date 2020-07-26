@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace WorkFlowManager.Common.Enums
 {
@@ -22,6 +21,15 @@ namespace WorkFlowManager.Common.Enums
 
         [Display(Name = "Purchasing Officer")]
         PurchasingOfficer = 110,
+
+        [Display(Name = "Budget Coordinator")]
+        BudgetCoordinator = 120,
+
+        [Display(Name = "Country Director")]
+        CountryDirector = 130,
+
+        [Display(Name = "Line Manager")]
+        LineManager = 130,
 
         [Display(Name = "System")]
         System = 1000
