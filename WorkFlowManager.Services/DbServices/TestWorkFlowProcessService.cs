@@ -2,6 +2,7 @@
 using Hangfire;
 using System.Web.Mvc;
 using WorkFlowManager.Common.DataAccess._UnitOfWork;
+using WorkFlowManager.Common.IServices;
 using WorkFlowManager.Common.Tables;
 using WorkFlowManager.Common.ViewModels;
 
@@ -22,7 +23,7 @@ namespace WorkFlowManager.Services.DbServices
 
 
         #region Decission Methods
-        private int GetOwnerIdFromId(int id)
+        private new int GetOwnerIdFromId(int id)
         {
             var workFlowTrace = _unitOfWork.Repository<WorkFlowTrace>().Get(x => x.Id == id);
             int rslt = -1;

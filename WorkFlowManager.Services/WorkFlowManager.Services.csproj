@@ -106,13 +106,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomForms\HierarchyExplorerWorkflowForm.cs" />
     <Compile Include="CustomForms\HealthInformationWorkFlowForm.cs" />
     <Compile Include="CustomForms\TestWorkFlowForm.cs" />
     <Compile Include="DbServices\DocumentService.cs" />
     <Compile Include="DbServices\DynamicMethodCallService.cs" />
     <Compile Include="DbServices\FormService.cs" />
-    <Compile Include="DbServices\IWorkFlow.cs" />
+    <Compile Include="DbServices\HierarchExplorerService.cs" />
     <Compile Include="DbServices\PurchasingWorkFlowProcessService.cs" />
+    <Compile Include="DbServices\PurchReqWorkflowProcessService.cs" />
     <Compile Include="DbServices\TestWorkFlowProcessService.cs" />
     <Compile Include="DbServices\WorkFlowDataService.cs" />
     <Compile Include="DbServices\WorkFlowProcessService.cs" />
@@ -123,6 +125,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="HierarchExplorerCD.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -131,7 +134,6 @@
       <Name>WorkFlowManager.Common</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
