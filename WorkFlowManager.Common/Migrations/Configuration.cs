@@ -3,11 +3,11 @@ namespace WorkFlowManager.Common.DataAccess.Migrations
     using Factory;
     using System.Collections.Generic;
     using System.Data.Entity.Migrations;
-    using WorkFlowManager.Common.Constants;
-    using WorkFlowManager.Common.DataAccess._Context;
+    using WorkFlowManager.Common.DataAccess;
     using WorkFlowManager.Common.DataAccess._UnitOfWork;
     using WorkFlowManager.Common.Dto;
     using WorkFlowManager.Common.Tables;
+    using WorkFlowManager.Common.Utilies;
 
     internal sealed class Configuration : DbMigrationsConfiguration<DataContext>
     {

@@ -57,11 +57,6 @@ namespace WorkFlowManager.Common.Extensions
             }
         }
 
-        /// <summary>
-        /// Render all messages that have been set during execution of the controller action.
-        /// </summary>
-        /// <param name="htmlHelper"></param>
-        /// <returns></returns>
         public static HtmlString RenderMessages(this HtmlHelper htmlHelper, MessageDialogType type = MessageDialogType.AdminLTE)
         {
             var messages = String.Empty;
@@ -292,7 +287,6 @@ namespace WorkFlowManager.Common.Extensions
             return slug;
         }
 
-        // Convert the string to Pascal case.
         public static string ToPascalCase(this string the_string)
         {
             // If there are 0 or 1 characters, just return the string.
@@ -324,7 +318,6 @@ namespace WorkFlowManager.Common.Extensions
 
             return result;
         }
-
 
         public static bool IsHexaDecimal(this string kod)
         {

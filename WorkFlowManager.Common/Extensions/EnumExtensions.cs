@@ -29,7 +29,6 @@ namespace WorkFlowManager.Common.Extensions
             }
 
             throw new ArgumentException("Not found.", "description");
-            // or return default(T);
         }
 
         public static IEnumerable<T> GetAllValues<T>(this T value) where T : struct
@@ -38,7 +37,6 @@ namespace WorkFlowManager.Common.Extensions
             {
                 yield return val;
             }
-
         }
 
         public static string GetDisplayValue<T>(this T value)

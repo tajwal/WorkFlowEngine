@@ -10,7 +10,7 @@ using WorkFlowManager.Common.DataAccess.Repositories;
 using WorkFlowManager.Common.Mapping;
 using WorkFlowManager.Common.Tables;
 
-namespace WorkFlowManager.Common.DataAccess._Context
+namespace WorkFlowManager.Common.DataAccess
 {
     public class DataContext : IdentityDbContext, IDbContext
     {
@@ -50,13 +50,10 @@ namespace WorkFlowManager.Common.DataAccess._Context
             modelBuilder.Configurations.Add(new WorkFlowTraceMap());
             modelBuilder.Configurations.Add(new TestFormMap());
             modelBuilder.Configurations.Add(new BusinessProcessMap());
-
-
+            modelBuilder.Configurations.Add(new HierarchyExplorerFormMap());
 
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
-
         }
-
 
         public override int SaveChanges()
         {
@@ -111,7 +108,6 @@ namespace WorkFlowManager.Common.DataAccess._Context
                 throw new DbEntityValidationException(sb.ToString(), ex.EntityValidationErrors);
             }
         }
-
 
         public new IDbSet<T> Set<T>() where T : class
         {

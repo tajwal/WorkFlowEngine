@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Web.Mvc;
 
-namespace WorkFlowManager.Common.InfraStructure
+namespace WorkFlowManager.Common.Infrastructure
 {
 
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = true)]

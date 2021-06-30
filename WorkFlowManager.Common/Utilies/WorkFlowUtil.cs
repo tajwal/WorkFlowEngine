@@ -4,7 +4,7 @@ using System.Text;
 using WorkFlowManager.Common.DataAccess._UnitOfWork;
 using WorkFlowManager.Common.Tables;
 
-namespace WorkFlowManager.Common.Constants
+namespace WorkFlowManager.Common.Utilies
 {
     public static class WorkFlowUtil
     {

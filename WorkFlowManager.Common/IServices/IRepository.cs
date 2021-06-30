@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace WorkFlowManager.Common.DataAccess.Repositories
+namespace WorkFlowManager.Common.IServices
 {
     public interface IRepository<TEntity> where TEntity : class
     {

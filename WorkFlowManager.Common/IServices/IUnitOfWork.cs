@@ -1,5 +1,6 @@
 ﻿using WorkFlowManager.Common.DataAccess.Repositories;
 using System;
+using WorkFlowManager.Common.IServices;
 
 namespace WorkFlowManager.Common.DataAccess._UnitOfWork
 {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace WorkFlowManager.Common.InfraStructure
+namespace WorkFlowManager.Common.Infrastructure
 {
     public class PagedData<T> : IEnumerable<T>
     {

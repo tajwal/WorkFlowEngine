@@ -108,17 +108,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Constants\IWorkFlowForm.cs" />
-    <Compile Include="Constants\WorkFlowUtil.cs" />
-    <Compile Include="DataAccess\Migrations\Configuration.cs" />
-    <Compile Include="DataAccess\Repositories\BaseRepository.cs" />
-    <Compile Include="DataAccess\Repositories\IDbContext.cs" />
-    <Compile Include="DataAccess\Repositories\IRepository.cs" />
-    <Compile Include="DataAccess\_Context\DataContext.cs" />
-    <Compile Include="DataAccess\_UnitOfWork\IUnitOfWork.cs" />
-    <Compile Include="DataAccess\_UnitOfWork\UnitOfWork.cs" />
+    <Compile Include="DataAccess\BaseRepository.cs" />
+    <Compile Include="DataAccess\DataContext.cs" />
+    <Compile Include="DataAccess\DataContext.cs" />
+    <Compile Include="DataAccess\UnitOfWork.cs" />
     <Compile Include="Dto\TaskVariable.cs" />
     <Compile Include="Dto\WorlFlowDto.cs" />
+    <Compile Include="IServices\IWorkFlow.cs" />
+    <Compile Include="IServices\IWorkFlowForm.cs" />
+    <Compile Include="Utilies\WorkFlowUtil.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="IServices\IDbContext.cs" />
+    <Compile Include="IServices\IRepository.cs" />
+    <Compile Include="IServices\IUnitOfWork.cs" />
     <Compile Include="Enums\FileType.cs" />
     <Compile Include="Enums\FormComplexity.cs" />
     <Compile Include="Enums\Gender.cs" />
@@ -133,14 +135,15 @@
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Factory\ProcessFactory.cs" />
     <Compile Include="Helper\ValidationHelper.cs" />
-    <Compile Include="InfraStructure\MultipleButtonAttribute.cs" />
-    <Compile Include="InfraStructure\PagedData.cs" />
+    <Compile Include="Infrastructure\MultipleButtonAttribute.cs" />
+    <Compile Include="Infrastructure\PagedData.cs" />
     <Compile Include="Mapping\BaseTableMap.cs" />
     <Compile Include="Mapping\BaseTableTableMap.cs" />
     <Compile Include="Mapping\ConditionMap.cs" />
     <Compile Include="Mapping\DocumentMap.cs" />
     <Compile Include="Mapping\FormViewMap.cs" />
     <Compile Include="Mapping\BusinessProcessMap.cs" />
+    <Compile Include="Mapping\HierarchyExplorerFormMap.cs" />
     <Compile Include="Mapping\ProcessMonitoringRoleMap.cs" />
     <Compile Include="Mapping\ProcessMap.cs" />
     <Compile Include="Mapping\TaskMap.cs" />
@@ -150,11 +153,17 @@
     <Compile Include="Mapping\DecisionPointMap.cs" />
     <Compile Include="Mapping\ConditionOptionMap.cs" />
     <Compile Include="Mapping\WorkFlowTraceMap.cs" />
+    <Compile Include="Migrations\202106281614167_AddHierarchyExplorerForm.cs" />
+    <Compile Include="Migrations\202106281614167_AddHierarchyExplorerForm.Designer.cs">
+      <DependentUpon>202106281614167_AddHierarchyExplorerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tables\BaseTable.cs" />
     <Compile Include="Tables\Document.cs" />
     <Compile Include="Tables\FormView.cs" />
     <Compile Include="Tables\BusinessProcess.cs" />
+    <Compile Include="Tables\HierarchyExplorerForm.cs" />
+    <Compile Include="Tables\PurchReqForm.cs" />
     <Compile Include="Tables\SubProcess.cs" />
     <Compile Include="Tables\Task.cs" />
     <Compile Include="Tables\Process.cs" />
@@ -168,6 +177,7 @@
     <Compile Include="Tables\WorkFlowTrace.cs" />
     <Compile Include="Tables\WorkFlowEngineVariable.cs" />
     <Compile Include="Validation\FormViewValidation.cs" />
+    <Compile Include="Validation\HierarchyExplorerValidation.cs" />
     <Compile Include="Validation\ProcessFormValidator.cs" />
     <Compile Include="Validation\DecisionMethodValidation.cs" />
     <Compile Include="Validation\TestFormViewModelValidator.cs" />
@@ -195,6 +205,11 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202106281614167_AddHierarchyExplorerForm.resx">
+      <DependentUpon>202106281614167_AddHierarchyExplorerForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

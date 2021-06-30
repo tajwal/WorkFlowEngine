@@ -7,12 +7,19 @@ namespace WorkFlowManager.Common.Tables
         public Task()
         {
             ProcessList = new List<Process>();
+            HierarchyExplorerFormList = new List<HierarchyExplorerForm>();
         }
 
         public void AddProcess<T>(T process) where T : Process
         {
             ProcessList.Add(process);
         }
+
+        public void AddHierarchyExplorerForm<T>(T hierarchyExplorerForm) where T : HierarchyExplorerForm
+        {
+            HierarchyExplorerFormList.Add(hierarchyExplorerForm);
+        }
+
         public int WorkFlowId { get; set; }
         public WorkFlow WorkFlow { get; set; }
         public string Name { get; set; }
@@ -21,6 +28,8 @@ namespace WorkFlowManager.Common.Tables
         public Process StartingProcess { get; set; }
 
         public List<Process> ProcessList { get; set; }
+
+        public List<HierarchyExplorerForm> HierarchyExplorerFormList { get; set; }
 
         public List<DecisionMethod> DecisionMethodList { get; set; }
         public List<FormView> FormViewList { get; set; }

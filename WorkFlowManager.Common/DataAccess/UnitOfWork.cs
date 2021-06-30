@@ -1,6 +1,7 @@
 ﻿using WorkFlowManager.Common.DataAccess.Repositories;
 using System;
 using System.Collections.Generic;
+using WorkFlowManager.Common.IServices;
 
 namespace WorkFlowManager.Common.DataAccess._UnitOfWork
 {
@@ -52,5 +53,9 @@ namespace WorkFlowManager.Common.DataAccess._UnitOfWork
             return _repositories[type];
         }
 
+        IRepository<TEntity> IUnitOfWork.Repository<TEntity>()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

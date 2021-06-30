@@ -29,7 +29,13 @@ namespace WorkFlowManager.Common.Enums
         CountryDirector = 130,
 
         [Display(Name = "Line Manager")]
-        LineManager = 130,
+        LineManager = 140,
+
+        [Display(Name = "Sub Director")]
+        SubDirector = 150,
+
+        [Display(Name = "TC Director/Mastofy")]
+        Director = 160,
 
         [Display(Name = "System")]
         System = 1000
