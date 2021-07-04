@@ -1,6 +1,6 @@
-﻿using WorkFlowManager.Common.DataAccess.Repositories;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using WorkFlowManager.Common.DataAccess.Repositories;
 using WorkFlowManager.Common.IServices;
 
 namespace WorkFlowManager.Common.DataAccess._UnitOfWork
@@ -51,11 +51,6 @@ namespace WorkFlowManager.Common.DataAccess._UnitOfWork
             _repositories.Add(type, Activator.CreateInstance(repositoryType.MakeGenericType(typeof(TEntity)), _context, this));
 
             return _repositories[type];
-        }
-
-        IRepository<TEntity> IUnitOfWork.Repository<TEntity>()
-        {
-            throw new NotImplementedException();
         }
     }
 }

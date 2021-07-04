@@ -1,6 +1,6 @@
-﻿using WorkFlowManager.Common.Tables;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Infrastructure.Annotations;
+using WorkFlowManager.Common.Tables;
 
 namespace WorkFlowManager.Common.Mapping
 {

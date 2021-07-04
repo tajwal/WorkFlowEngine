@@ -1,8 +1,8 @@
-﻿using WorkFlowManager.Common.Enums;
-using WorkFlowManager.Common.Tables;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using WorkFlowManager.Common.Enums;
+using WorkFlowManager.Common.Tables;
 
 namespace WorkFlowManager.Common.ViewModels
 {

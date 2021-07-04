@@ -10,7 +10,7 @@ namespace WorkFlowManager.Common.Mapping
             ToTable("HierarchyExplorerForm");
 
             HasRequired(s => s.Task)
-                   .WithMany(s =>s.HierarchyExplorerFormList)
+                   .WithMany(s => s.HierarchyExplorerFormList)
                    .HasForeignKey(x => x.TaskId)
                    .WillCascadeOnDelete(false);
         }

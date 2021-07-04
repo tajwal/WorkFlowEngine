@@ -125,7 +125,6 @@ namespace WorkFlowManager.Common.ViewModels
         [Display(Name = "Name")]
         public string FormName { get; set; }
 
-
         [DataType(DataType.MultilineText)]
         [Display(Name = "Description")]
         public string FormDescription { get; set; }
@@ -176,7 +175,6 @@ namespace WorkFlowManager.Common.ViewModels
         public int NumberOfStandartProcess { get; set; }
         public int NumberOfTotalProcess { get; set; }
 
-
         public int NumberOfWillBeDesignedDecisionMethod { get; set; }
 
         public int NumberOfWillBeDesignedSimpleForm { get; set; }
@@ -188,9 +186,7 @@ namespace WorkFlowManager.Common.ViewModels
         public int NumberOfWillBeDesignedComplexForm { get; set; }
         public int NumberOfWillBeDesignedComplexPage { get; set; }
 
-
         public int NumberOfTotalJobWillBeComplete { get; set; }
-
     }
 
     public class WorkFlowView
